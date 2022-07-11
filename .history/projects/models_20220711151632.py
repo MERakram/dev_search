@@ -12,6 +12,3 @@ class Project(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     id = models.UUIDField(
         primary_key=True, default=uuid.uuid4, editable=False, unique=True,)
-
-    def __str__(self):
-        return self.title
