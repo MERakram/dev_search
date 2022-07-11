@@ -35,4 +35,4 @@ def project(request, pk):
         if project['id'] == pk:
             project_obj = project
     context = {'project': project_obj}
-    return render(request, 'projects/single-project.html', context)
+    return render(request, 'projects/project.html', context)

@@ -26,13 +26,9 @@ projectsList = [
 def projects(request):
     page = 'projects'
     context = {'projects': projectsList, 'page': page}
-    return render(request, 'projects/projects.html', context)
+    msg = 'fuck you now and forever'
+    return render(request, 'projects/projects.html', {'message': msg})
 
 
 def project(request, pk):
-    project_obj = None
-    for project in projectsList:
-        if project['id'] == pk:
-            project_obj = project
-    context = {'project': project_obj}
-    return render(request, 'projects/single-project.html', context)
+    return render(request, 'projects/single-project.html')

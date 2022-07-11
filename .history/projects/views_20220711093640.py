@@ -30,9 +30,4 @@ def projects(request):
 
 
 def project(request, pk):
-    project_obj = None
-    for project in projectsList:
-        if project['id'] == pk:
-            project_obj = project
-    context = {'project': project_obj}
-    return render(request, 'projects/single-project.html', context)
+    return render(request, 'projects/single-project.html')

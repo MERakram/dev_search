@@ -2,7 +2,7 @@
 <h1>many many projects</h1>
 <ul>
   {% for project in projects %}
-  <li>Name <a href="{% url 'project' project.id %}">{{project.title}}</a></li>
+  <li>Name <a href="{% url 'project' project.id %}"></a>{{project.title}}</li>
   {% endfor %}
 </ul>
 <p>
