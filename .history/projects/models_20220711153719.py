@@ -9,9 +9,6 @@ class Project(models.Model):
     description = models.TextField(null=True, blank=True)
     demo_link = models.CharField(max_length=2000, null=True, blank=True)
     source_link = models.CharField(max_length=2000, null=True, blank=True)
-    tags = models.ManyToManyField('Tag', blank=True)
-    total_votes = models.IntegerField(default=0, null=True, blank=True)
-    vote_ratio = models.IntegerField(default=0, null=True, blank=True)
     created = models.DateTimeField(auto_now_add=True)
     id = models.UUIDField(
         primary_key=True, default=uuid.uuid4, editable=False, unique=True,)
