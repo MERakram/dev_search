@@ -1,0 +1,6 @@
+{%extends 'main.html'%} {%block content%}
+<form>
+  <p>are u sure? "{{object}}"</p>
+  <a href="{%url 'project'%}"><button>Go back</button></a>
+  <input type="submit" value="Confirm" />
+</form>

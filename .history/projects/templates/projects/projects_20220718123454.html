@@ -2,18 +2,12 @@
 <h1>many many projects</h1>
 <ul>
   {% for project in projects %}
-  <li>
-    Name
-    <a href="{% url 'project' project.id %}">{{project.title}}</a>
-    <a href="{% url 'delete-project' project.id %}">delete</a>
-  </li>
+  <li>Name <a href="{% url 'project' project.id %}">{{project.title}}</a></li>
   {% endfor %}
 </ul>
 <ul>
   {% for project in projects %}
-  <li>
-    edit <a href="{% url 'update-project' project.id %}">{{project.title}}</a>
-  </li>
+  <li>edit <a href="{% url 'project' project.id %}">{{project.title}}</a></li>
   {% endfor %}
 </ul>
 <p>
