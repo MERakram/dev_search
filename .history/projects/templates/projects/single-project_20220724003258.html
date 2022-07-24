@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=h, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>lonly project</h1>
+    <h2>{{project.title}}</h2>
+    <hr />
+    <img style="max-width: 200" src="{{project.featured_image.url}}" />
+    <hr />
+    {%for tag in tags%}
+    <h5>{{tag}}</h5>
+    {%endfor%}
+    <hr />
+    <h3>{{project.description}}</h3>
+  </body>
+</html>
